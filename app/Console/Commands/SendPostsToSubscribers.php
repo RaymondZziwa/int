@@ -49,10 +49,9 @@ class SendPostsToSubscribers extends Command
              $subject = 'New posts on our website';
              $body = '';
  
-             foreach ($unique_posts as $story) {
+             foreach ($unique_posts as $post) {
                  $body .= '<h2>' . $post->title . '</h2>';
                  $body .= '<p>' . $post->description . '</p>';
-                //  $body .= '<p><a href="' . $story->url . '">Read more</a></p>';
              }
  
              // Send the email
